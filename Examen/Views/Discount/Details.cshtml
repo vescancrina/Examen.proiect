@@ -1,0 +1,36 @@
+﻿@model Examen.Models.Discount
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Discount</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kind)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kind)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExpirationDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExpirationDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Update" asp-route-id="@Model.Id">Update</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
